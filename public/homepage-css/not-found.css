@@ -1,0 +1,191 @@
+[class*="flag-"] {
+  display: inline-block;
+  background: url("images/sprite-splash.png") no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-align: left;
+}
+
+.flag-ar {
+  background-position: -0px -0px;
+  width: 56px;
+  height: 56px;
+}
+
+.flag-br {
+  background-position: -0px -56px;
+  width: 56px;
+  height: 56px;
+}
+
+.flag-mx {
+  background-position: -0px -112px;
+  width: 56px;
+  height: 56px;
+}
+
+.flag-bo {
+  background-position: -0px -168px;
+  width: 48px;
+  height: 48px;
+}
+
+.flag-cl {
+  background-position: -0px -216px;
+  width: 48px;
+  height: 48px;
+}
+
+.flag-co {
+  background-position: -0px -264px;
+  width: 48px;
+  height: 48px;
+}
+
+.flag-cr {
+  background-position: -0px -312px;
+  width: 48px;
+  height: 48px;
+}
+
+.flag-do {
+  background-position: -0px -360px;
+  width: 48px;
+  height: 48px;
+}
+
+.flag-ec {
+  background-position: -0px -408px;
+  width: 48px;
+  height: 48px;
+}
+
+.flag-gt {
+  background-position: -0px -456px;
+  width: 48px;
+  height: 48px;
+}
+
+.flag-hn {
+  background-position: -0px -504px;
+  width: 48px;
+  height: 48px;
+}
+
+.flag-ni {
+  background-position: -0px -552px;
+  width: 48px;
+  height: 48px;
+}
+
+.flag-pa {
+  background-position: -0px -600px;
+  width: 48px;
+  height: 48px;
+}
+
+.flag-pe {
+  background-position: -0px -648px;
+  width: 48px;
+  height: 48px;
+}
+
+.flag-pr {
+  background-position: -0px -696px;
+  width: 48px;
+  height: 48px;
+}
+
+.flag-sv {
+  background-position: -0px -744px;
+  width: 48px;
+  height: 48px;
+}
+
+.flag-us {
+  background-position: -0px -792px;
+  width: 48px;
+  height: 48px;
+}
+
+.flag-uy {
+  background-position: -0px -840px;
+  width: 48px;
+  height: 48px;
+}
+
+.flag-py {
+  background-position: -0px -888px;
+  width: 48px;
+  height: 48px;
+}
+
+body {
+  background-color: #210001;
+}
+
+.bg-splash {
+  background-image: url(images/bg-404.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.flags-ctn {
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 336px;
+  overflow: auto;
+}
+.flags-ctn__content--preferred {
+  width: 336px;
+  margin: 0 auto;
+  text-align: center;
+}
+.flags-ctn__content--preferred a {
+  display: block;
+  padding: 16px 0;
+}
+.flags-ctn__content {
+  width: 896px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 8px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1151px) {
+  .flags-ctn__content {
+    width: 448px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .flags-ctn__content {
+    width: 224px;
+  }
+}
+.flags-ctn__content a {
+  display: block;
+  color: white;
+  padding: 16px 0;
+}
+.flags-ctn__title {
+  color: #fff;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: normal;
+  padding: 16px 0 24px 0;
+}
+.flags-ctn .title {
+  color: #fff;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  font-weight: normal;
+  padding: 8px 0 0 0;
+  margin-bottom: 0;
+}

@@ -1,0 +1,29 @@
+<% content_for :head do %>
+	<title><%= I18n.t("products.flights.seo_title") %></title>
+
+	<meta name="description" content="<%= I18n.t("seo_info.home.flights.description") %>">
+	<meta name="keywords" content="<%= I18n.t("seo_info.home.flights.keywords") %>">
+
+	<link rel="canonical" href="<%= I18n.t("country.current."+ I18n.t("country.current").keys.first.to_s)[:url] %>">
+	<link rel="stylesheet" href="<%= get_css_path() %>/am-home.css">
+
+	<meta property="og:title" content="<%= I18n.t("products.flights.seo_title") %>" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="<%= I18n.t("country.current."+ I18n.t("country.current").keys.first.to_s)[:url] %>" />
+	<meta property="og:image" content="<%= get_img_path %>/almundo-iso.png" />
+
+<% end %>
+
+<%= partial(:'partials/search-flights') %>
+
+<%= partial(:'partials/credit-cards') %>
+
+<%= partial(:'partials/mailing') %>
+
+<%= partial(:'partials/offers') %>
+
+<%= partial(:'partials/reasons') %>
+
+<%= partial(:'partials/social-feedback') %>
+
+<%= partial(:'partials/ads') %>

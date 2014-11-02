@@ -1,0 +1,93 @@
+//---------------------------------\\
+//----------Table of Content-------\\
+//---------------------------------\\
+
+// 01 Country Flags
+
+.flag {
+	width: 16px;
+	height: 11px;
+	background:url(images/sprite-flags.png) no-repeat;
+	display:inline-block;
+}
+.flag.flag--ar,.flag.flag--AAR {
+    background-position: -16px 0
+}
+.flag.flag--bo ,.flag.flag--ABO {
+    background-position: -32px 0
+}
+.flag.flag--br ,.flag.flag--ABR {
+    background-position: -48px 0
+}
+.flag.flag--ca, .flag.flag--ACA {
+    background-position: -64px 0
+}
+.flag.flag--cl, .flag.flag--ACL {
+    background-position: -80px 0
+}
+.flag.flag--co,.flag.flag--ACO  {
+    background-position: 0 -11px
+}
+.flag.flag--cr ,.flag.flag--ACR {
+    background-position: -16px -11px
+}
+.flag.flag--cu , .flag.flag--ACU {
+    background-position: -32px -11px
+}
+.flag.flag--de, .flag.flag--ADE {
+    background-position: -48px -11px
+}
+.flag.flag--dm, .flag.flag--ADO {
+    background-position: -64px -11px
+}
+.flag.flag--ec , .flag.flag--AEC {
+    background-position: -80px -11px
+}
+.flag.flag--es , .flag.flag--AES {
+    background-position: 0 -22px
+}
+.flag.flag--fr , .flag.flag--AFR {
+    background-position: -16px -22px
+}
+.flag.flag--gb , .flag.flag--ADE {
+    background-position: -32px -22px
+}
+.flag.flag--gt, .flag.flag--AGT {
+    background-position: -48px -22px
+}
+.flag.flag--hn, .flag.flag--AHN {
+    background-position: -64px -22px
+}
+.flag.flag--mx , .flag.flag--AMX {
+    background-position: -80px -22px
+}
+.flag.flag--ni , .flag.flag--ANI {
+    background-position: 0 -33px
+}
+.flag.flag--pa , .flag.flag--APA {
+    background-position: -16px -33px
+}
+.flag.flag--pe, .flag.flag--APE {
+    background-position: -32px -33px
+}
+.flag.flag--pr , .flag.flag--APR {
+    background-position: -48px -33px
+}
+.flag.flag--py , .flag.flag--APY {
+    background-position: -64px -33px
+}
+.flag.flag--sv, .flag.flag--ASV {
+    background-position: -80px -33px
+}
+.flag.flag--us , .flag.flag--ASU {
+    background-position: 0 -44px
+}
+.flag.flag--uy, .flag.flag--AUY {
+    background-position: -16px -44px
+}
+.flag.flag--ve ,.flag.flag--AVE{
+    background-position: -32px -44px
+}
+.flag.flag--do ,.flag.flag--ADO{
+    background-position: -48px -44px
+}

@@ -1,0 +1,12 @@
+<% if @current_has_video %>
+	<!--VIDEO-->
+	<a id="manifesto"></a>
+	<aside class="epp-ctn epp-ctn--gtr video" >
+		<video controls="controls" poster="<%= get_img_path %>/video.jpg" id="video1">
+			<source src="<%= get_files_path %>/video.mp4" type="video/mp4">
+			<source src="<%= get_files_path %>/video.webm" type="video/webm">
+			Tu navegador no soporta video HTML5
+		</video>
+	</aside>
+
+<% end %>

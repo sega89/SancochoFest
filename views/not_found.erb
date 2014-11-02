@@ -1,0 +1,19 @@
+<% content_for :head do %>
+		
+	<link rel="stylesheet" href="<%= get_css_path %>/am-not-found.css"></link>
+	<title><%= I18n.t("errors.seo_title") %></title>
+
+<% end %>
+
+<div class="bg-splash"></div>
+<section class="epp-ctn display-table display-table--middle">
+	<div class="epp-ctn--xxl align-center logo-ctn">
+		<a href="/" class="am-logo am-logo--lg am-logo--<%= @current_locale %>" title="almundo.com">
+			<span class="am-logo__iso"></span>
+			<span class="am-logo__typo"></span>
+			<span class="am-logo__slogan"><%= I18n.t("slogan") %></span>
+		</a>
+		<h1 class="epp-cl-1 title-l"><%= I18n.t("errors.not_found") %></h1>
+		<p class="epp-cl-1 title-xs"><%= I18n.t("errors.advise") %> <a href="/"><%= I18n.t("brand") %></a></p>
+	</div>
+</section>

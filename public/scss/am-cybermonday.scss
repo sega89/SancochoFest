@@ -1,0 +1,361 @@
+//---------------------------------\\
+//----------Table of Content-------\\
+//---------------------------------\\
+
+// 1 Search
+// 2 Credit Cards
+// 3 Mailing
+// 4 Mailing
+// 5 Offers
+// 6 Reasons to buy
+// 7 Video
+// 8 Social Feedback
+// 9 Adds
+
+
+@import "compass/css3";
+@import "compass/support";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/transition";
+
+@import "am-variables";
+@import "epp-mixins";
+
+.cover{
+    h1{
+        @include font-rem (normal,48px,56px);
+        @include text-shadow(1px 1px 1px black);
+        color: white;
+        margin: 80px 0 8px 0;
+    }
+    h2{
+        @include font-rem (normal,20px,32px);
+        @include text-shadow(1px 1px 1px black);
+        color: white;
+    }
+}
+
+.sections-links{
+    vertical-align: top;
+}
+.search__links{
+    list-style-type: none;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 16px;
+    li{
+        margin-bottom: 8px;
+        margin-left: 0;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__item{
+        display: table;
+        width: 100%;
+        .icon{
+            display: table-cell;
+            font-size: 32px;
+            line-height: 32px;
+            background: rgba($gray-lightest, 0.8);
+            width: 80px;
+            vertical-align: middle;
+            color: $gray-dark;
+            text-align: center;
+            [class*="icon-"]{
+                margin: 8px;
+            }
+        }
+        .text{
+            display: table-cell;
+            background: rgba($gray-lighter, 0.8);
+            padding: 8px;
+            vertical-align: middle;
+            color: $gray-dark;
+            text-align: left;
+            h4{
+                font-size: 16px;
+                line-height: 24px;
+                margin: 0;
+            }
+            p{
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+        &:hover{
+            text-decoration: none;
+            .icon{
+                background: rgba($gray-lightest, 0.5);
+            }
+            .text{
+                background: rgba($gray-lighter, 0.5);
+                text-decoration: none;
+            }
+        }
+    }
+}
+.steps{
+    h1{
+        @include font-rem (normal,24px,32px);
+        text-align: center;
+        margin:32px 0 16px 0; 
+    }
+    h2{
+        @include font-rem (normal,18px,24px);
+        margin-bottom: 16px;
+    }
+}
+.step{
+    border: 1px solid #1C811C;
+    margin-right: 16px;
+    padding: 16px;
+    position: relative;
+    min-height: 96px;
+    color: white;
+    &:before{
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-left: 8px solid #1C811C;
+        border-bottom: 8px solid transparent;
+        border-right: 8px solid transparent;
+        position: absolute;
+        top: 50%;
+        right: -16px;
+        margin-top: -8px;
+    }
+    &:after{
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-left: 8px solid white;
+        border-bottom: 8px solid transparent;
+        border-right: 8px solid transparent;
+        position: absolute;
+        top: 50%;
+        right: -15px;
+        margin-top: -8px;
+    }
+    .step-description{
+        @include font-rem (normal,14px,16px);
+    }
+    &__title{
+        @include font-rem (normal,18px,24px);
+        background-color: #1C811C;
+        @include border-radius (50%);
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+    }
+    &__text{
+
+    }
+    &.first{
+        background-color: #379F7A;
+        &:after{
+            border-left: 8px solid #379F7A;
+        }
+    }
+    &.middle{
+        background-color: #78AE62;
+        &:after{
+            border-left: 8px solid #78AE62;
+        }
+    }
+    &.last{
+        margin-right: 0;
+        background-color: #BBB749;
+        &:before{
+            content: "";
+            border-left: 8px solid transparent;
+            right: 0;
+        }
+        &:after{
+            border-left: 8px solid transparent;
+            right: 0;
+        }
+    }
+
+}
+
+.award-description{
+    border: 1px solid $blue;
+    margin-right: 16px;
+    padding: 16px;
+    min-height: 312px;
+    position: relative;
+    @include box-sizing (border-box);
+    &:before{
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-left: 8px solid $blue;
+        border-bottom: 8px solid transparent;
+        border-right: 8px solid transparent;
+        position: absolute;
+        top: 50%;
+        right: -16px;
+        margin-top: -8px;
+    }
+    &:after{
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-left: 8px solid white;
+        border-bottom: 8px solid transparent;
+        border-right: 8px solid transparent;
+        position: absolute;
+        top: 50%;
+        right: -15px;
+        margin-top: -8px;
+    }
+    &__title{
+        color:$blue;
+        position: relative;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+        @include font-rem (normal,18px,24px);
+        &:before{
+            content:" ";
+            height: 4px;
+            width: 90px;
+            background: $blue;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    &__text{
+        @include font-rem (normal,12px,16px);
+    }
+}
+.gifts-cat{
+    padding: 16px 0;
+    &__title{
+        text-align: center;
+        @include font-rem (normal,24px,32px);
+        margin-bottom: 16px;
+    }
+}
+
+.promotions{
+    background-color: $gray-lightest;
+}
+.awards{
+
+}
+.benefits{
+    background-color: $gray-lightest;
+}
+.raffle{
+
+}
+.events{
+    background-color: $gray-lightest;
+}
+
+.gift{
+    position: relative;
+    img{
+        width: 100%;
+    }
+    &__brand{
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        @include translateY (-50%);
+        h3{
+            margin-bottom: 0;
+            color: white;
+            @include font-rem (normal,20px,24px);
+            @include text-shadow (1px 1px 1px black);
+        }
+        h4{
+            color: white;
+            margin-bottom: 0;
+            @include font-rem (normal,24px,32px);
+            @include text-shadow (1px 1px 1px black);
+        }
+    }
+    &__text{
+        background: rgba(0,0,0,0.8);
+        color:white;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        &__discount{
+            margin: 8px 0 0 8px; 
+            @include font-rem (normal,16px,16px);
+        }
+        &__description{
+            margin: 8px 0 8px 8px!important;
+            @include font-rem (normal,12px,16px);
+        }
+    }
+}
+
+/* ---- Counter ---- */
+
+#counter {
+
+    margin: 55px auto 0 auto;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 92px;
+    color: $gray-dark;
+    overflow: hidden;
+}
+
+.countDays, .countHours, .countMinutes, .countSeconds {
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    background: rgba(255,255,255,0.5);
+    text-align: center;
+    border: 8px solid white;
+    @include border-radius(50%);
+}
+
+.points {
+    display: inline-block;
+    width: 40px;
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 44px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 162px;
+    vertical-align: top;
+}
+
+.position {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    margin: 24px 0 0 0;
+    vertical-align: top;
+    height: 88px;
+    line-height: 88px;
+}
+
+.digit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    text-align: center;
+    display: inline-block;
+}
+
+.boxName {
+    display: block;
+    font-size: 24px;
+    line-height: 32px;
+    color: $gray-dark;
+}

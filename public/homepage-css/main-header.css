@@ -1,0 +1,5 @@
+
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: variables.\A        Load paths:\A          Compass::SpriteImporter\A          /Users/Salvador/Google Drive/Al Mundo/Maquetas/scss\A          /Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets\A         on line 1 of /Users/Salvador/Google Drive/Al Mundo/Maquetas/scss/main-header.scss\A \A 1: @import \"variables\";\A 2: @import \"compass/css3\";\A 3: \A 4: .header {\A 5: 	position: relative;\A 6: "; }

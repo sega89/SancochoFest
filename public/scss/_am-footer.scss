@@ -1,0 +1,77 @@
+//---------------------------------\\
+//----------Table of Content-------\\
+//---------------------------------\\
+
+// 01 Footer
+
+.footer {
+	border-bottom: 1px solid $gray-lighter;
+	margin: 16px auto;
+	padding-top: 16px;
+	.main-menu{
+		margin-top: 16px;
+	}
+}
+
+.footer-title {
+	font-size: 14px;
+	line-height: 24px;
+	color: $gray-dark;
+	border-bottom: 1px solid $gray-light;
+}
+
+.footer-list{
+	margin: 0;
+	text-overflow: ellipsis;
+	&__item{
+		margin: 0 0 4px 0;
+		list-style-type: none;
+		font-size: 12px;
+	}
+	&__dest{
+		font-size: 12px;
+	}
+}
+.legal {
+	padding: 16px;
+	box-sizing:border-box;
+	
+	.social-menu{
+		@include respond-to(ph){
+			margin-bottom: 16px;
+		}
+	}
+}
+
+.legal-text {
+	text-align: right;
+	font-size: 12px;
+}
+
+.legal__data-fiscal {
+	display: block;
+	width: 34px;
+	height: 45px;
+	float: right;
+	margin: 0 0 0 8px;
+	
+}
+
+.footer-list__item__logo{
+	display: block;
+	width: 132px;
+	height: 24px;
+	margin: 5px 0 0 0;
+}
+.sub-footer{
+	border-top: 1px solid $gray-lighter;
+	padding-top: 16px!important;
+	padding-bottom: 16px!important;
+	margin-top: 16px;
+	.am-logo{
+		margin: 6px 0;
+	}
+	.copy{
+		margin:16px 0;
+	}
+}

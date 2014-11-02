@@ -1,0 +1,102 @@
+//---------------------------------\\
+//----------Table of Content-------\\
+//---------------------------------\\
+
+// 1 
+
+
+
+@import "compass/css3";
+@import "compass/support";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/transition";
+
+@import "am-variables";
+@import "epp-mixins";
+
+//-----------------\\
+.cover{
+    background-size: cover;
+    background-position: center center;
+    height: 360px;
+    width: 100%;
+    &--md{
+		height: 184px;
+		overflow: hidden;
+		display: block;
+		background-position: center center;
+    }
+    &--lg{
+  		height: 360px;  	
+    }
+}
+
+
+.title{
+	@include font-rem(normal, 32px, 40px, Ubuntu);
+	text-align: center;
+	margin-top: 16px;
+	color: $orange;
+}
+.subtitle{
+	@include font-rem(normal, 16px, 24px, Ubuntu);
+	text-align: center;
+	color: $orange;
+	margin-bottom: 32px;
+}
+p{
+	@include font-rem(normal, 14px, 24px, Ubuntu);
+}
+h3{
+	@include font-rem(bold, 14px, 16px);
+}
+h2{
+	@include font-rem(bold, 18px, 24px);
+}
+
+
+.press-info{
+	background: $gray-lightest;
+	padding-top: 32px;
+	margin-top: 32px;
+	h2{
+		@include font-rem(normal, 24px, 32px, Ubuntu);
+	}
+	ul{
+		@include font-rem(normal, 12px, 24px, Ubuntu);
+		li{
+			margin: 0 0 8px 0;
+		}
+	}
+}
+.press-quote{
+	background: $orange;
+	color:white;
+	text-align: center;
+	padding: 32px 0;
+	p{
+		@include font-rem(normal, 24px, 32px, Ubuntu);
+	}
+	.signature{
+		@include font-rem(normal, 18px, 24px, Ubuntu);
+		margin:16px 0; 
+	}
+}
+.press-kit{
+	margin-bottom: 32px;
+	padding: 32px 0;
+	h3{
+		@include font-rem(normal, 24px, 32px, Ubuntu);
+	}
+}
+footer{
+	border-top: 1px solid $gray-lighter;
+	padding-top: 16px!important;
+	padding-bottom: 16px!important;
+	.am-logo{
+		margin: 6px 0;
+	}
+	.copy{
+		margin:8px 0;
+	}
+}

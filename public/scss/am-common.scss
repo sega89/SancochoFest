@@ -1,0 +1,101 @@
+//---------------------------------\\
+//----------Table of Content-------\\
+//---------------------------------\\
+
+// Imports Modules
+// Redefinination of 8pp Pixelator tags
+
+@import "compass/css3";
+@import "compass/support";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/transition";
+
+@import "bootstrap-overwrite";
+
+@import "epp";
+
+@import "am-variables";
+@import "am-components";
+@import "am-icons";
+@import "am-sprite";
+
+@import "bxslider";
+
+
+body{
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+	color:$gray-darker;
+}
+a{
+	&:link{
+		color:$link;
+		text-decoration: none;
+	}
+	&:visited{
+		color:$link-dark;
+	}
+	&:hover{
+		color:$link-light;
+		text-decoration: underline;
+	}
+	&:active{
+		color:$link-dark;
+		text-decoration: underline;
+	}
+}
+h1{
+	@include font-rem(normal,32px,40px,null);
+}
+h2{
+	@include font-rem(normal,28px,32px,null);
+}
+h3{
+	@include font-rem(normal,24px,32px,null);
+}
+h4{
+	@include font-rem(normal,20px,24px,null);
+}
+h5{
+	@include font-rem(normal,18px,24px,null);
+}
+h6{
+	@include font-rem(normal,16px,24px,null);
+}
+input[type="text"], input[type="search"], input[type="password"], input[type="email"], input[type="tel"], input[type="number"], input[type="url"], input[type="date"], input[type="datetime"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime-local"]{
+	border-color:$gray-lighter;
+	color: $gray-dark;
+	@include font-rem(normal, 14px, 16px);
+	@include input-placeholder {
+	    color: $gray-light;
+	    font-weight: normal;
+	}
+	&.input--error{
+		@include input-placeholder {
+		    color: $red;
+		}
+	}
+}
+select{
+	border-color:$gray-lighter;
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+	color:$gray-darker;
+	@include font-rem(normal, 14px, 16px);
+	&.select--error{
+		color: $red;
+	}
+}
+p{
+	@include font-rem(normal, 14px, 16px);
+}
+select{
+	@include appearance(none);
+	border-color:$gray-lighter;
+}
+ul{
+	@include font-rem(null,14px,24px,null);
+	list-style-position: inside;
+	margin-bottom:8px;
+}
+
+
+

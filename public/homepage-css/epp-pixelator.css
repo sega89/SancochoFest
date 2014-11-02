@@ -1,0 +1,5 @@
+
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: epp-mixins.\A        Load paths:\A          Compass::SpriteImporter\A          /Users/Salvador/Google Drive/Al Mundo/Maquetas/scss\A          /Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets\A         on line 9 of /Users/Salvador/Google Drive/Al Mundo/Maquetas/scss/epp-pixelator.scss\A \A 4: \A 5: // 1 Reset\A 6: // 2 pixelator\A 7: \A 8: @import \"compass/css3/\";\A 9: @import \"epp-mixins\";\A 10: \A 11: //---------------------------------\\\A 12: //--------------Reset--------------\\\A 13: //---------------------------------\\\A 14: "; }

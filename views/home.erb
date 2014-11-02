@@ -1,0 +1,84 @@
+<% content_for :head do %>
+	<title><%= I18n.t("home.seo_title") %></title>
+	
+	<!-- Keywords and Description -->
+	<meta name="description" content="<%= I18n.t("seo_info.home.home.description") %>">
+	<meta name="keywords" content="<%= I18n.t("seo_info.home.home.keywords") %>">
+
+	<!-- Open Graph -->
+	<meta property="og:title" content="<%= I18n.t("home.seo_title") %>">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="<%= I18n.t("country.current."+ I18n.t("country.current").keys.first.to_s)[:url] %>">
+	<meta property="og:image" content="http://almundo.com.ar/homepage-css/images/almundo-iso.png">
+	<meta property="fb:admins" content="1674952527">
+	<meta property="og:description" content="Tenemos las mejores tarifas de viajes para tu tratamiento a base de vouchers, papaya y bronceador. Almundo.com porque las vacaciones son un tema serio.">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@almundo_ar" />
+	<meta name="twitter:title" content="Ofertas de Viaje. Vacaciones en serio almundo.com" />
+	<meta name="twitter:description" content="Tenemos las mejores tarifas de viajes para tu tratamiento a base de vouchers, papaya y bronceador. Almundo.com porque las vacaciones son un tema serio" />
+	<meta name="twitter:image" content="http://almundo.com.ar/homepage-css/images/almundo-iso.png" />
+	<meta name="twitter:url" content="<%= I18n.t("country.current."+ I18n.t("country.current").keys.first.to_s)[:url] %>" />
+
+	<!-- Google+ -->
+	<meta itemprop="name" content="Almundo.com Ofertas de Viaje, Hoteles, Vuelos, Paquetes, Cruceros y más">
+	<meta itemprop="description" content="Almundo.com Porque son vacaciones y las vacaciones son un tema serio">
+	<meta itemprop="image" content="http://almundo.com.ar/homepage-css/images/almundo-iso.png">
+	<meta name="google-site-verification" content="3a9G1s-MC5vSOVYPIDzhbC_x3xTO31ktX37NZj7z6mE" />
+	<link rel="publisher" href="https://plus.google.com/101839199797041245044/">
+	
+	<!-- Canonical -->
+	<link rel="canonical" href="<%= I18n.t("country.current."+ I18n.t("country.current").keys.first.to_s)[:url] %>">
+
+	<!-- Particular CSS -->
+	<link rel="stylesheet" href="<%= get_css_path() %>/am-home.css">
+
+<% end %>
+
+<%= partial(:"partials/search-#{@current_product}") %>
+
+<%= partial(:'partials/credit-cards') %>
+
+<%= partial(:'partials/mailing') %>
+
+<%= partial(:'partials/offers') %>
+
+<%= partial(:'partials/reasons') %>
+
+<%= partial(:'partials/video') %>
+
+<%= partial(:'partials/social-feedback') %>
+
+<%= partial(:'partials/ads') %>
+
+<% if @current_country_code == "AR" && @show_popup %>
+	<%= partial(:'partials/modal-brand') %>
+<% end %>
+
+<% content_for :footer do %>
+	<% if @current_country_code == "AR" %>
+		<script type="text/javascript">
+			
+			$( document ).ready(function() {
+
+				$( "#modal-brand" ).animate({
+				    opacity: 1,
+				    top: "50%"
+				  }, 1500, function() {
+				    $( "#modal-brand" ).delay(5000).fadeOut('slow');
+				  });
+
+	            $( 'body' ).click(function(){
+	            	$( "#modal-brand" ).hide();
+	            })
+	            $('#video1').on('play', function (e) {
+				    $('.video' ).height('auto');
+				    $('html, body').animate({
+				        scrollTop: $(".video").offset().top
+				    }, 500);
+				});
+			})
+		</script>
+	<% end %>
+<% end %>	

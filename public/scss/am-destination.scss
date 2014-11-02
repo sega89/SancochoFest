@@ -1,0 +1,88 @@
+//---------------------------------\\
+//----------Table of Content-------\\
+//---------------------------------\\
+
+// 1 Search
+// 2 Credit Cards
+// 3 Mailing
+// 4 Mailing
+// 5 Offers
+// 6 Reasons to buy
+// 7 Video
+// 8 Social Feedback
+// 9 Adds
+
+
+@import "compass/css3";
+@import "compass/support";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/transition";
+
+@import "am-variables";
+@import "epp-mixins";
+
+//----------Search-------\\
+
+
+
+.cover{
+    background-size: cover;
+    height: 360px;
+    width: 100%;
+    display: table;
+    &__text{
+        color: white;
+        display: table-cell;
+        vertical-align: middle;
+        @include text-shadow (1px 1px 1px black);
+        .subtitle{
+            @include font-rem(bold, 16px, 24px);
+            padding: 0 16px;
+        }
+    }
+}
+.city-info{
+    margin-top: 32px;
+    &__description{
+        @include font-rem(normal, 14px, 24px);
+    }
+    &__recommendations, &__weather{
+        .list{
+            border: 1px solid $gray-light;
+            list-style-type: none;
+            padding: 8px;
+            .title{
+                color: $blue;
+                margin: 0 0 8px 0;
+                @include font-rem(normal, 14px, 24px);
+            }
+            .item{
+                margin:0 0 8px 0;
+                line-height: 24px;
+                @include font-rem(normal, 14px, 24px);
+                [class*="icon-"]{
+                    display: inline-block;
+                    vertical-align: top;
+                    line-height: 24px;
+                    margin-right: 8px;
+                    font-size: 24px;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+.point-of-interest{
+    background:$gray-lightest;
+    padding: 24px 0;
+    margin-top: 32px;
+    .poi__title{
+        text-align: center;
+    }
+    .poi__subtitle{
+        text-align: center;
+        font-size: 16px;
+    }
+}

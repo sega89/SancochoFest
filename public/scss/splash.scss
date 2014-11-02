@@ -1,0 +1,86 @@
+@import "compass/css3";
+@import "compass/support";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/transition";
+
+@import "am-variables";
+@import "epp-mixins";
+
+@import "am-sprite-splash";
+
+
+body{
+	background-color: #210001;
+}
+.am-logo{
+	display: block;
+	text-align: center;
+	padding: 80px 0;
+}
+
+.bg-splash{
+	background-image: url(images/bg-splash.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right top;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.flags-ctn {
+	background-color: rgba(0,0,0,.6);
+	min-height: 336px;
+	overflow: auto;
+	&__content--preferred{
+		width: 336px;
+		margin: 0 auto;
+		text-align: center;
+		a{
+			display: block;
+			padding: 16px 0;
+			color: white;
+		}
+	}
+	&__content{
+		width: 896px;
+		margin: 0 auto;
+		text-align: center;
+		padding-bottom: 8px;
+		@include respond-to(tb){
+			width: 448px;
+		}
+		@include respond-to(ph){
+			width: 224px;
+		}
+		a{
+			display: block;
+			color: white;
+			padding: 16px 0;
+		}
+	}
+	&__title{
+		color: #fff;
+		font-size: 32px;
+		line-height: 40px;
+		text-align: center;
+		font-weight: normal;
+		padding: 16px 0 24px 0;
+	}
+	.title{
+		color: #fff;
+		font-size: 14px;
+		line-height: 16px;
+		text-align: center;
+		font-weight: normal;
+		padding: 8px 0 0 0;
+		margin-bottom: 0;
+	}
+}
+
+
+
+

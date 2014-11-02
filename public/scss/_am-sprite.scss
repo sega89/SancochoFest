@@ -1,0 +1,10 @@
+@import "compass/utilities/sprites";
+@import "sprite-images/*.png";
+@include all-sprite-images-sprites(true);
+
+
+@import "am-american-flags";
+
+[class*="sprite-images-"]{
+	display: inline-block;
+}

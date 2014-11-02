@@ -1,0 +1,21 @@
+
+
+	<!--MAIN MENU-->
+	<div class="epp-ctn main-menu-ctn">
+		<div class="epp-ctn epp-ctn--xxl epp-ctn--gtr">
+			<nav class="epp-cl-1 main-menu">
+
+				<% I18n.t("products").each do | e,i | %>
+
+
+				<a href="<%= i[:link] %>" class="main-menu__button main-menu__button--<%= i[:class] %> hidden--tb hidden--ph">
+					<span class="main-menu__button__icon <%= i[:icon] %>"></span><%= i[:text] %>
+				</a>
+				<% end %>	
+				<a href="#menu-mobile" class="main-menu__button main-menu__button__hamburger hidden--dt">
+					<span class="main-menu__button__icon icon-hambuerger icon-hambuerger-menu"></span>Menu
+				</a>
+			</nav>
+		</div>
+	</div>
+	<!--/MAIN MENU-->

@@ -1,0 +1,30 @@
+//---------------------------------\\
+//----------Table of Content-------\\
+//---------------------------------\\
+
+// 01 Social Menu
+
+.social-menu {
+	margin: 20px 0;
+	padding: 0;
+	display: inline-block;
+	font-size: 0;
+	vertical-align: top;
+	line-height: 22px;
+	&__item{
+		display: inline-block;
+		list-style-type: none;
+		text-decoration: none;
+		font-size: 22px;
+		color: red;
+		vertical-align: top;
+		line-height: 22px;
+		margin-right: 5px;
+		&__button{
+			color: $gray !important;
+			&:hover {
+				text-decoration:none;
+			}
+		}
+	}
+}

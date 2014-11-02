@@ -1,0 +1,241 @@
+//---------------------------------\\
+//----------Table of Content-------\\
+//---------------------------------\\
+
+// 01 Placeholder for selected btn
+// 02 Main Menu Container
+// 03 Main Menu
+// 04 Main Menu Responsive
+
+@import "compass/css3";
+@import "am-variables";
+
+
+//----------Placeholder for selected btn-------\\
+
+%selected{
+	color:$orange!important;
+	cursor: default;
+	&:after {
+		content: "";
+		background:$orange;
+		width:100%;
+		height:5px;
+		position: absolute;
+		top:-3px;
+		left: 0;
+	}
+	&:before {
+		content: "";
+		width: 0; 
+	   	height: 0;
+	   	border-top: 7px solid $orange;
+	   	border-left: 8px solid transparent; 
+	   	border-right: 8px solid transparent; 
+	   	position: absolute;
+	   	top: 0px;
+	   	left: 41%;
+	}
+	&:hover{
+		color: $orange;
+		&:after {
+		content: "";
+		background:$orange;
+		width:100%;
+		height:5px;
+		position: absolute;
+		top:-3px;
+		left: 0;
+	}
+	&:before {
+		content: "";
+		width: 0; 
+		height: 0;
+		border-top: 7px solid $orange;
+		border-left: 8px solid transparent; 
+		border-right: 8px solid transparent; 
+		position: absolute;
+		top: 0px;
+		left: 41%;
+		}
+	}
+}
+
+
+.main-menu-ctn{
+	border-top:1px solid $gray-light;
+ 	border-bottom:1px solid $gray-light;
+ 	margin:0 auto 0 auto;
+ 	z-index: 1;
+	position: relative;
+ 	@include box-shadow(0px 3px 5px 0px rgba(50, 50, 50, 0.2));
+}
+.main-menu {
+	width:100%;
+ 	font-size: 0;
+	&__button {
+ 		display:inline-block;
+ 		color:$gray !important;
+ 		position:relative;
+ 		padding: 0 14px;
+ 		text-transform: capitalize;
+ 		@include font-rem(normal,14px,40px);
+ 		&:hover{
+ 			color:$gray-light !important;
+ 			text-decoration: none;
+			&:after {
+				content: "";
+				background:$gray-light;
+				width:100%;
+				height:5px;
+				position: absolute;
+				top:-3px;
+				left: 0;
+			}
+			&:before {
+				content: "";
+				width: 0; 
+				height: 0;
+				border-top: 8px solid $gray-light;
+				border-left: 8px solid transparent; 
+				border-right: 8px solid transparent; 
+				position: absolute;
+				top: 0px;
+				left: 41%;
+			}
+		}		
+		&__icon {
+ 			margin-right:2px;
+ 			width:16px;
+ 			height:16px;
+ 			line-height: 16px;
+ 			display:inline-block;
+		}
+		&__hamburger {
+			float: left;
+			&:before {
+				content: "";
+				width: 0; 
+			   	height: 0;
+			   	border-top: 7px solid transparent;
+			   	border-left: 8px solid transparent; 
+			   	border-right: 8px solid transparent; 
+			   	position: absolute;
+			   	top: 0px;
+			   	left: 41%;
+			}
+			 &:hover{
+ 				color:$gray-light !important;
+ 				text-decoration: none;
+				&:after {
+					content: "";
+					background:transparent;
+					width:100%;
+					height:5px;
+					position: absolute;
+					top:-3px;
+					left: 0;
+				}
+				&:before {
+					content: "";
+					width: 0; 
+					height: 0;
+					border-top: 7px solid transparent;
+					border-left: 8px solid transparent; 
+					border-right: 8px solid transparent; 
+					position: absolute;
+					top: 0px;
+					left: 41%;
+				}
+			}
+		}
+		.aereos &, .TKT &{
+			&.main-menu__button--aereos, &.main-menu__button--TKT{
+				@extend %selected;
+			}
+		}
+		.hoteles &, .HTL &{
+			&.main-menu__button--hoteles, &.main-menu__button--HTL{
+				@extend %selected;
+			}
+		}
+		.paquetes &, .PKT &{
+			&.main-menu__button--paquetes, &.main-menu__button--PKT{
+				@extend %selected;
+			}
+		}
+		.cruceros &, .CRU &{
+			&.main-menu__button--cruceros, &.main-menu__button--CRU{
+				@extend %selected;
+			}
+		}
+		.autos &, .CAR &{
+			&.main-menu__button--autos, &.main-menu__button--CAR{
+				@extend %selected;
+			}
+		}
+		.escapadas &, .SCA &{
+			&.main-menu__button--escapadas, &.main-menu__button--SCA{
+				@extend %selected;
+			}
+		}
+		.disney &, .PDN &{
+			&.main-menu__button--disney, &.main-menu__button--PDN{
+				@extend %selected;
+			}
+		}
+		.trenes &, .PTR &{
+			&.main-menu__button--trenes, &.main-menu__button--PTR{
+				@extend %selected;
+			}
+		}
+		.servicios &, .SRV &{
+			&.main-menu__button--servicios, &.main-menu__button--SRV{
+				@extend %selected;
+			}
+		}
+		.seguros &, .SME &{
+			&.main-menu__button--seguros, &.main-menu__button--SME{
+				@extend %selected;
+			}
+		}
+		.destinos &, .DTN &{
+			&.main-menu__button--destinos, &.main-menu__button--DTN{
+				@extend %selected;
+			}
+		}
+		.excursiones &, .EXC &{
+			&.main-menu__button--excursiones, &.main-menu__button--EXC{
+				@extend %selected;
+			}
+		}
+	}
+	&--responsive{
+		box-shadow: none;
+		border-bottom: none;
+		text-align: left;
+		height: 500px;
+		margin: 0 0 40px 0;
+	 	.main-menu__button{
+			display: block;
+			border-bottom: 1px solid $gray-light;
+			&:before {
+				content: "";
+				width: 0; 
+				height: 0;
+				border-top: 0 solid transparent!important;
+				border-left: 0 solid transparent!important; 
+				border-right: 0 solid transparent!important; 
+				position: absolute;
+				top: 0px;
+				left: 41%;
+			}
+			&:after{
+				content: "";
+				background:transparent!important;
+				width:0!important;
+				height:0!important;
+			}
+		}
+	}
+}

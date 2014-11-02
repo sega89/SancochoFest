@@ -1,0 +1,444 @@
+@import "compass/css3";
+@import "compass/support";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/transition";
+
+@import "am-variables";
+
+.order{
+	&:after{
+		content:"&#9776;";
+	}
+	background: $gray-lightest;
+	margin-bottom: 15px;
+	&__by{
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	&__currency{
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+
+.flight-detail{
+	border: 1px solid $blue;
+	@include box-shadow ($gray-light 2px 2px 2px);
+	&__title{
+		background: $gray-lighter;
+		line-height: 30px;
+		padding: 0 15px;
+		margin-bottom: 15px;
+		font-size: 16px;
+		font-weight: bold;
+		color: $gray-darkest;
+		.x-close {
+			float: right;
+			margin-top: 6px;
+		}
+	}
+	.segment{
+		margin:0;
+		&__departure{
+			margin-top: 15px;
+		}
+		&__arrival{
+			padding-bottom: 15px;
+		}
+		&__number{
+			background: $gray-lighter;
+			display: inline-block;
+			font-size: 11px;
+			line-height: 18px;
+			padding: 0 10px;
+			margin: 0;
+			font-weight: bold;
+			color: $gray-darkest;
+		}
+		&__date{
+			font-size: 11px;
+			display: block;
+		}
+		&__time{
+			font-size: 16px;
+			font-weight: bold;
+			display: inline-block;
+		}
+		&__airport{
+			margin: 0;
+			font-size: 13px;
+		}
+		&__fly{
+			display: inline-block;
+			font-size: 11px;
+			line-height: 18px;
+			padding: 0 5px;
+			margin: 0;
+		}
+		&__airlines{
+			background: $gray-lightest;
+			font-size: 11px;
+			padding: 15px;
+			margin-bottom: 15px;
+			&__airline__type{
+				margin-bottom: 10px;
+				display: inline-block;
+				color: $gray;
+			}
+			&__airline{
+				margin-bottom: 10px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+				img{
+					width: 20px;
+					height: 20px;
+				}
+			}
+		}
+	}
+	.technical-info{
+		font-size: 13px;
+		line-height: 30px;
+		border-top: 1px dashed $gray-light;
+		border-bottom: 1px dashed $gray-light;
+		text-align: center;
+		color: $blue;
+		margin-bottom: 15px;
+	}
+	.total-time{
+		font-size: 16px;
+		line-height: 30px;
+		background: $gray-lightest;
+		text-align: center;
+		color: $blue;
+	}
+	.time-clarification{
+		padding: 0 0 15px 15px;
+		display: inline-block;
+		font-size: 11px;
+	}
+	.segment-separator{
+		height: 1px;
+		background: $gray-lightest;
+		position: relative;
+		margin: 15px 0;
+		p{
+			text-align: center;
+		}
+		span{
+			display: inline-block;
+			position: relative;
+			top: -10px;
+			background: white;
+			padding: 0 10px;
+			font-size: 11px;
+			color: $blue;
+		}
+	}
+}
+
+
+
+
+.cluster{
+	background: white;
+	border:1px solid $gray-light;
+	margin-bottom: 15px;
+	&__itineraries{
+		background: white;
+		padding: 15px;
+	}
+}
+.cluster__itinerary{
+	padding-right: 0;
+	&__title{
+		background: $gray-lightest;
+		padding: 5px;
+		color: $gray;
+		span{
+			line-height:15px;
+			display: inline-block;
+		}
+		&__direction{
+			font-size: 16px;
+			font-weight: bold;
+			color: $gray-dark;
+		}
+		&__date{
+			font-size: 13px;
+		}
+		&__city{
+			font-size: 13px;
+		}
+		&__airport{
+			font-size: 13px;
+		}
+	}
+	&__item{
+		border: 1px solid #fff;
+		border-bottom: 1px solid $gray-lighter;
+		line-height: 30px;
+		font-size: 13px;
+		padding-left: 10px;
+		label{
+			font-weight: normal;
+			margin:0;
+			.schedule{
+				display: inline-block;
+				margin:0 15px;
+				span{
+					line-height: 30px;
+					display: inline-block;
+					strong{
+						line-height: 30px;
+						display: inline-block;
+						vertical-align: top;
+					}
+				}
+			}
+			.duration{
+				margin-right: 15px;
+				line-height: 30px;
+				display: inline-block;
+			}
+			.scales{
+				margin-right: 15px;
+				line-height: 30px;
+				display: inline-block;
+			}
+			.airline-logo{
+				width: 20px;
+				height: 20px;
+				margin: 5px 0;
+				vertical-align: top;
+			}
+			.airline-name{
+				line-height: 30px;
+				display: inline-block;
+				margin-left: 5px;
+			}
+		}
+		&--selected{
+			background: $cyan-light;
+			border: 1px solid $cyan;
+		}
+		&:hover{
+			background: transparent;
+			border: 1px solid $cyan;
+		}
+	}
+	.pay-data{
+		margin: 15px 0 0 0;
+		font-size: 11px;
+	}
+}
+.cluster__fare{
+	background: $cyan-light;
+	padding: 0!important;
+	overflow: hidden;
+	&__price{
+		background:$cyan;
+		color: $gray-darkest;
+		padding: 15px;
+		text-align: center;
+		.online-sale{
+			background: green;
+			color: white;
+			display: table;
+			width: 100%;
+			font-size: 11px;
+			padding: 10px;
+			margin-bottom: 15px;
+			.icon{
+				display: table-cell;
+				vertical-align: middle;
+			}
+			p{
+				margin: 0;
+			}
+		}
+		&__legend{
+			font-size: 11px;
+			margin: 0;
+		}
+		&__currency{
+			font-size:16px;
+		}
+		&__amount{
+			font-size:30px;
+		}
+	}
+	&__detail{
+		font-size: 11px;
+		margin: 15px;
+		width: 80%;
+		width: calc(100% - 30px);
+		td:last-child{
+			text-align: right;
+		}
+	}
+	hr{
+		border-top: 1px solid #ddd;
+		margin: 15px;
+	}
+	&__total{
+		margin: 15px;
+		width: 80%;
+		width: calc(100% - 30px);
+		font-size: 13px;
+		td:last-child{
+			text-align: right;
+			font-size: 18px;
+			font-weight: bold;
+			.currency{
+				font-size: 13px;
+			}
+		}
+	}
+	.btn{
+		margin-bottom: 15px;
+	}
+}
+
+
+
+.widget-lateral-busqueda{
+	background: $orange;
+	padding: 15px;
+	margin-bottom: 15px;
+	.widget-lateral-busqueda-form label {
+		font-size: 11px;
+		color: white;
+	}
+}
+.widget-lateral-busqueda-titulo{
+	color: white;
+	font-size: 16px;
+	margin-bottom: 15px;
+	display: inline-block;
+}
+
+.btn-buscador-action{
+	background: $blue;
+	color: white;
+}
+.cancelSearch {
+	background: url(img/ui-bg_autocomplete-error.gif) no-repeat scroll 0 0 red;
+	display: none;
+	height: 12px;
+	overflow: hidden;
+	position: absolute;
+	bottom: 9px;
+	text-indent: -9999px;
+	width: 12px;
+	z-index: 1;
+	display: inline;
+	right: 21px;
+}
+.form_errores {
+	display: none;
+	padding: 7px !important;
+}
+.mensaje-error {
+	background: red;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 30px;
+	padding: 0 7px;
+}
+input.error {
+	background-color: pink;
+	border: 1px solid red;
+}
+.radio label, .checkbox label {
+	display: inline;
+	margin-bottom: 0;
+	font-weight: normal;
+	cursor: pointer;
+}
+.checkbox{
+	label{
+		.business-label{
+			padding-left: 0;
+		}
+	}
+}
+
+
+
+
+//FILTROS
+.panel-group {
+	padding: 15px 15px 0 15px;;
+	border: 1px solid $gray-light;
+}
+.panel-default {
+	border: 0 none;
+	& > .panel-heading {
+		border: 0 none;
+	}
+}
+.panel {
+	margin-bottom: 20px;
+	background-color: #fff;
+	border: 0 none;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.panel-heading {
+	padding: 8px 8px;
+	border:o none;
+}
+.panel-title {
+	font-size: 13px;
+	.caret{
+		float: right;
+		margin-top: 4px;
+	}
+}
+.panel-body {
+	padding: 15px 0;
+	border-top: 0 none!important;
+	.col-sm-12{
+		padding: 0;
+		label{
+			width: 100%;
+			font-weight: normal;
+			font-size: 13px;
+		}
+		.badge{
+			border-radius: 0;
+			min-width: 30px;
+		}
+		img{
+			width: 20px;
+			height: 20px;
+		}
+
+	}
+	.filtro-con-checkbox-y-linea{
+		border-bottom: 1px solid $gray-lightest;
+		margin-bottom: 5px; 
+	}
+}
+.filtrar-por{
+	h3{
+		color:white;
+		background: $gray;
+		margin: 0;
+		padding: 15px;
+		font-size: 16px;
+	}
+}
+.am-price-filter{
+	input{
+		margin: 5px 0;
+	}
+	#filtro-precio{
+		margin: 5px 0;
+	}
+}

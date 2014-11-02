@@ -1,0 +1,43 @@
+//---------------------------------\\
+//----------Table of Content-------\\
+//---------------------------------\\
+
+// 1 
+
+
+
+@import "compass/css3";
+@import "compass/support";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/transition";
+
+@import "am-variables";
+@import "epp-mixins";
+
+//-----------------\\
+
+
+.institutional-description{
+	margin:16px auto 32px auto; 
+	.title{
+		@include font-rem(normal, 24px, 32px);
+		text-align: center;
+		margin-top: 16px;
+	}
+	.subtitle{
+		@include font-rem(normal, 18px, 24px);
+		text-align: center;
+	}
+	p{
+		@include font-rem(normal, 12px, 16px);
+	}
+	h3{
+		@include font-rem(bold, 14px, 16px);
+	}
+	h2{
+		@include font-rem(bold, 18px, 24px);
+	}
+	ul{
+		@include font-rem(normal, 12px, 24px);
+	}
+}

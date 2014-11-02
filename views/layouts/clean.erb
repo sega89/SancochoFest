@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ie6" lang="<%= @current_business_domain['language'] %>" class="<%= @product_class %>" itemscope itemtype="http://schema.org/Organization"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="<%= @current_business_domain['language'] %>" class="<%= @product_class %>" itemscope itemtype="http://schema.org/Organization"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="<%= @current_business_domain['language'] %>" class="<%= @product_class %>" itemscope itemtype="http://schema.org/Organization"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="<%= @current_business_domain['language'] %>" class="<%= @product_class %>" itemscope itemtype="http://schema.org/Organization"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="<%= @current_business_domain['language'] %>" itemscope itemtype="http://schema.org/Organization"> <!--<![endif]-->
+	<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">	 
+
+			<link rel="stylesheet" href="<%= get_css_path() %>/am-common.css">
+			
+			<%= yield_content :head %>
+	 
+	</head>
+	<body>
+	 
+	   <%= yield %>
+
+	   <%= yield_content :footer %>
+
+	</body>
+</html>

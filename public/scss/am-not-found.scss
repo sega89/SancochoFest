@@ -1,0 +1,35 @@
+@import "compass/css3";
+@import "compass/support";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/transition";
+
+@import "am-variables";
+@import "epp-mixins";
+
+@import "am-sprite-splash";
+
+
+body{
+	background-color: #B9D3EF;
+}
+
+.bg-splash{
+	background-image: url(images/bg-404.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+h1{
+	color: white;
+	@include font-rem(normal,48px,64px);
+	@include text-shadow (1px 1px 1px black);
+}
+p{
+	@include font-rem(normal,16px,24px);
+}
